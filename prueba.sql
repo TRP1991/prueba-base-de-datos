@@ -118,7 +118,7 @@ INSERT 0 1
 prueba=# INSERT INTO productos (id, nombre_producto, descripcion_producto, valor_unitario) VALUES (80, 'Ornamento', 'Ornamento brote de bambú', 1200);
 INSERT 0 1
 
----(LUEGO DE INSERTAR LOS VALORES PEDIDOS EN LA PRUEBA, ACTUALICÉ LA TABLA INSERTANDO LOS ID DE CADA PRODUCTO POR CATEGORIA)---
+---(LUEGO DE INSERTAR LOS VALORES PEDIDOS EN LA PRUEBA, ACTUALICÉ LA TABLA CON LOS ID DE CADA PRODUCTO POR CATEGORIA)---
 prueba=# SELECT * FROM productos;
  id | nombre_producto |       descripcion_producto       | valor_unitario | id_categoria 
 ----+-----------------+----------------------------------+----------------+--------------
@@ -288,3 +288,17 @@ prueba=# SELECT DISTINCT nombre_cliente FROM clientes JOIN facturas ON clientes.
 (2 rows)
 
 ---(Cliente 2 (Christian Silva) compró 2 veces el producto 60)---
+
+---Listado de Tablas Creadas--- 
+
+prueba=# \d
+                List of relations
+ Schema |        Name        | Type  |   Owner   
+--------+--------------------+-------+-----------
+ public | categorias         | table | TRubilarP
+ public | clientes           | table | TRubilarP
+ public | facturas           | table | TRubilarP
+ public | listados_productos | table | TRubilarP
+ public | productos          | table | TRubilarP
+(5 rows)
+
